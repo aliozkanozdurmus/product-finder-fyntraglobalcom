@@ -1,0 +1,531 @@
+/* Product Finder - INVENIRE Stil Dosyası */
+
+/* Montserrat fontu yükle */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body, .pfi-root, .pfi-admin-wrap {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+:root {
+  --pfi-main-color: #172253;
+  --pfi-bg-dark: #181c23;
+  --pfi-bg-light: #f8f8f8;
+  --pfi-bg-glass: rgba(255,255,255,0.18);
+  --pfi-card-radius: 14px;
+  --pfi-shadow: 0 2px 18px rgba(0,0,0,0.13);
+  --pfi-filter-btn-radius: 32px;
+}
+
+.pfi-theme-dark {
+  background-color: var(--pfi-bg-dark) !important;
+  color: #f3f4f6 !important;
+}
+.pfi-theme-light {
+  background-color: var(--pfi-bg-light) !important;
+  color: #232733 !important;
+}
+
+.pfi-root {
+  min-height: 450px;
+  padding: 0;
+  width: 100% !important;
+  margin: 0 auto;
+}
+
+.pfi-hero {
+  background: var(--pfi-bg-light);
+  padding: 48px 0 36px 0;
+  text-align: center;
+  border-radius: 0 0 18px 18px;
+  margin-bottom: 32px;
+  width: 100% !important;
+  margin: 0 auto;
+}
+.pfi-theme-dark .pfi-hero {
+  background: #232733;
+  color: #f3f4f6;
+}
+.pfi-theme-light .pfi-hero {
+  background: #fff;
+  color: #232733;
+}
+.pfi-hero h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: -1px;
+}
+.pfi-hero .pfi-search-form {
+  margin: 0 auto;
+  max-width: 100% !important;
+  background: var(--pfi-bg-light);
+  border-radius: 12px;
+  box-shadow: var(--pfi-shadow);
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+}
+.pfi-theme-dark .pfi-hero .pfi-search-form {
+  background: #181c23;
+}
+.pfi-search-form input[type="text"] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1.18em;
+  padding: 18px 0;
+  outline: none;
+}
+.pfi-search-form button {
+  background: none;
+  border: none;
+  color: var(--pfi-main-color);
+  font-size: 1.6em;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: color 0.2s;
+}
+.pfi-search-form button:hover {
+  color: #ff7a3c;
+}
+
+.pfi-tabs {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin: 0 0 18px 0;
+}
+.pfi-tab {
+  background: none;
+  border: none;
+  color: #f3f4f6;
+  font-size: 1.08em;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+.pfi-tab.active, .pfi-tab:hover {
+  background: #ff4c1e;
+  color: #fff;
+}
+.pfi-tab .pfi-tab-count {
+  background: #232733;
+  color: #ff4c1e;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.95em;
+  margin-left: 8px;
+}
+
+.pfi-filters-bar {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 0 0 24px 0;
+  justify-content: center;
+}
+.pfi-filter-btn {
+  background: var(--pfi-main-color) !important;
+  color: #fff !important;
+  border: 2px solid var(--pfi-main-color) !important;
+  border-radius: var(--pfi-filter-btn-radius);
+  padding: 14px 28px;
+  font-size: 1.08em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s, transform 0.18s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+  outline: none;
+}
+.pfi-filter-btn:hover, .pfi-filter-btn.active {
+  background: #fff !important;
+  color: var(--pfi-main-color) !important;
+  border: 2px solid var(--pfi-main-color) !important;
+  box-shadow: 0 4px 18px var(--pfi-main-color, #ff4c1e33) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Kart stilleri */
+.pfi-results li {
+  margin: 0;
+  color: inherit;
+  background: var(--pfi-bg-light);
+  border-radius: var(--pfi-card-radius);
+  box-shadow: none;
+  border: 1.5px solid #e3eaf3;
+  padding: 24px 28px 18px 28px;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+}
+.pfi-theme-dark .pfi-results li {
+  background: #232733;
+  border: 1.5px solid #232733;
+}
+.pfi-card-shadowed .pfi-results li {
+  box-shadow: var(--pfi-shadow);
+}
+.pfi-card-rounded .pfi-results li {
+  border-radius: 32px;
+}
+.pfi-card-glass .pfi-results li {
+  background: var(--pfi-bg-glass);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255,255,255,0.18);
+}
+.pfi-card-gradient .pfi-results li {
+  background: linear-gradient(135deg, var(--pfi-main-color) 0%, #232733 100%);
+  color: #fff;
+  border: none;
+}
+.pfi-card-flat .pfi-results li {
+  box-shadow: none;
+  border-radius: 0;
+}
+.pfi-results li:hover {
+  box-shadow: 0 6px 32px var(--pfi-main-color, #ff4c1e33);
+  border: 1.5px solid var(--pfi-main-color);
+}
+.pfi-results li strong {
+  font-size: 1.18em;
+  color: var(--pfi-main-color) !important;
+}
+.pfi-card-gradient .pfi-results li strong {
+  color: #fff;
+}
+.pfi-results li span.pfi-label {
+  display: inline-block;
+  font-size: 0.97em;
+  color: var(--pfi-main-color) !important;
+  margin-right: 8px;
+  font-weight: 500;
+}
+.pfi-theme-light .pfi-results li span.pfi-label {
+  color: #ff4c1e;
+}
+.pfi-results li .pfi-desc {
+  margin-top: 8px;
+  color: inherit;
+  font-size: 1em;
+}
+.pfi-no-results {
+  margin-top: 32px;
+  color: var(--pfi-main-color) !important;
+  font-weight: bold;
+  background: rgba(255,76,30,0.08) !important;
+  border: 1.5px solid var(--pfi-main-color) !important;
+  border-radius: 8px;
+  padding: 18px 24px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* Glassmorphism popup */
+.pfi-filter-popup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24,28,35,0.55);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pfi-filter-popup-inner {
+  background: var(--pfi-bg-glass);
+  box-shadow: 0 8px 48px rgba(0,0,0,0.22);
+  border-radius: 18px;
+  padding: 36px 38px 28px 38px;
+  min-width: 320px;
+  max-width: 90vw;
+  color: #232733;
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255,255,255,0.08);
+  animation: pfi-popup-in 0.18s cubic-bezier(.4,2,.6,1) both;
+}
+.pfi-theme-dark .pfi-filter-popup-inner {
+  color: #fff;
+  background: rgba(36,40,50,0.85);
+}
+@keyframes pfi-popup-in {
+  0% { transform: scale(0.92) translateY(30px); opacity: 0; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+.pfi-popup-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: var(--pfi-main-color) !important;
+}
+.pfi-popup-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+}
+.pfi-popup-list-btn {
+  background: var(--pfi-main-color) !important;
+  color: #fff !important;
+  border: 2px solid var(--pfi-main-color) !important;
+  border-radius: 32px;
+  padding: 12px 26px;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  outline: none;
+}
+.pfi-popup-list-btn:hover {
+  background: #fff !important;
+  color: var(--pfi-main-color) !important;
+  border: 2px solid var(--pfi-main-color) !important;
+  box-shadow: 0 4px 18px var(--pfi-main-color, #ff4c1e33) !important;
+  transform: translateY(-2px) scale(1.04);
+}
+.pfi-popup-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.pfi-popup-close:hover {
+  opacity: 1;
+}
+
+/* Scrollbar koyu tema */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #e3eaf3;
+}
+.pfi-theme-dark ::-webkit-scrollbar {
+  background: #232733;
+}
+::-webkit-scrollbar-thumb {
+  background: #181c23;
+  border-radius: 8px;
+}
+.pfi-theme-light ::-webkit-scrollbar-thumb {
+  background: #e3eaf3;
+}
+
+/* ADMIN DASHBOARD */
+.pfi-admin-wrap {
+  max-width: 600px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(34,113,177,0.08);
+  padding: 32px 36px 28px 36px;
+  border: 1.5px solid #e3eaf3;
+}
+.pfi-admin-wrap h1 {
+  color: #2271b1;
+  font-size: 2em;
+  margin-bottom: 24px;
+}
+.pfi-admin-form input[type="file"] {
+  margin-bottom: 18px;
+}
+.pfi-admin-form input[type="submit"] {
+  padding: 10px 28px;
+  background: linear-gradient(90deg,#2271b1 60%,#135e96 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px rgba(34,113,177,0.08);
+  transition: background 0.2s;
+}
+.pfi-admin-form input[type="submit"]:hover {
+  background: linear-gradient(90deg,#135e96 60%,#2271b1 100%);
+}
+.pfi-admin-msg {
+  margin-top: 18px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 1.08em;
+  font-weight: 500;
+}
+.pfi-admin-msg.success {
+  background: #e6f7e6;
+  color: #22713b;
+  border: 1.5px solid #b3e6b3;
+}
+.pfi-admin-msg.error {
+  background: #ffeaea;
+  color: #b00;
+  border: 1.5px solid #ffb3b3;
+}
+
+.pfi-pagination .pfi-page-link[style] {
+  background: var(--pfi-main-color) !important;
+  color: #fff !important;
+}
+.pfi-pagination .pfi-page-link {
+  color: var(--pfi-main-color) !important;
+  border-radius: 6px;
+  padding: 6px 14px;
+  margin: 0 2px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.18s, color 0.18s;
+}
+.pfi-pagination .pfi-page-link:hover {
+  background: var(--pfi-main-color) !important;
+  color: #fff !important;
+}
+
+/* Modal overlay and content styles */
+.pfi-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.pfi-modal-content {
+  background: var(--pfi-bg-light);
+  color: inherit;
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+}
+.pfi-theme-dark .pfi-modal-content {
+  background: #232733;
+}
+.pfi-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: var(--pfi-main-color);
+  cursor: pointer;
+}
+.pfi-modal-close:hover {
+  color: #fff;
+}
+.pfi-modal-body {
+  margin-top: 16px;
+}
+
+/* Filter popup search and pagination styles */
+.pfi-filter-popup-inner .pfi-popup-search {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: var(--pfi-bg-light);
+  color: inherit;
+}
+.pfi-theme-dark .pfi-filter-popup-inner .pfi-popup-search {
+  background: #2b2e38;
+  border-color: #3a3f4b;
+}
+.pfi-filter-popup-inner .pfi-popup-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.pfi-filter-popup-inner .pfi-popup-prev,
+.pfi-filter-popup-inner .pfi-popup-next {
+  background: none;
+  border: none;
+  color: var(--pfi-main-color);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+.pfi-theme-dark .pfi-filter-popup-inner .pfi-popup-prev,
+.pfi-theme-dark .pfi-filter-popup-inner .pfi-popup-next {
+  color: #ff4c1e;
+}
+
+/* Total results header under filters */
+.pfi-all-results {
+  font-size: 1.12em;
+  font-weight: 600;
+  margin: 16px 0;
+  color: var(--pfi-main-color) !important;
+}
+
+/* Search suggestions dropdown */
+.pfi-suggestions {
+  position: absolute;
+  top: auto;
+  z-index: 10001;
+  background: var(--pfi-bg-light);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 4px 0 0 0;
+  width: auto;
+}
+.pfi-suggestions li.pfi-suggestion-item {
+  list-style: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: inherit;
+}
+.pfi-suggestions li.pfi-suggestion-item:hover {
+  background: var(--pfi-main-color);
+  color: #fff;
+}
+#pfi-loading-overlay i.fas {
+  color: var(--pfi-main-color);
+}
+#pfi-loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.pfi-theme-dark .pfi-suggestions {
+  background: #232733;
+  border-color: #3a3f4b;
+}
+.pfi-theme-dark .pfi-suggestions li.pfi-suggestion-item:hover {
+  background: #ff4c1e;
+}
+
+/* Ellipsis in pagination */
+.pfi-pagination .pfi-page-ellipsis {
+  display: inline-block;
+  padding: 6px 12px;
+  color: var(--pfi-main-color);
+  font-weight: 600;
+} 

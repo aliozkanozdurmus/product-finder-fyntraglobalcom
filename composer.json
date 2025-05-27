@@ -1,0 +1,13 @@
+{
+  "name": "ozkan/product-finder-invenire",
+  "description": "Excel tablosu ile ürün arama eklentisi.",
+  "type": "wordpress-plugin",
+  "require": {
+    "phpoffice/phpspreadsheet": "^1.29"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProductFinderInvenire\\": "./"
+    }
+  }
+} 
