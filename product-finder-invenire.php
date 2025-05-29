@@ -606,12 +606,12 @@ class ProductFinderInvenire {
                 } else {
                     echo '<strong>' . esc_html($row->product_name) . '</strong><br>';
                 }
-                $icon = get_option('pfi_icon_industry','fas fa-industry');
-                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Industry:</span>' . esc_html($row->industry) . '<br>';
-                $icon = get_option('pfi_icon_technology','fas fa-microchip');
-                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Technology:</span>' . esc_html($row->technology) . '<br>';
                 $icon = get_option('pfi_icon_chemical_structure','fas fa-vial');
                 echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Chemical Structure:</span>' . esc_html($row->chemical_structure) . '<br>';
+                $icon = get_option('pfi_icon_technology','fas fa-microchip');
+                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Technology:</span>' . esc_html($row->technology) . '<br>';
+                $icon = get_option('pfi_icon_industry','fas fa-industry');
+                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Industry:</span>' . esc_html($row->industry) . '<br>';
                 $icon = get_option('pfi_icon_cas_number','fas fa-barcode');
                 echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">CAS Number:</span>' . esc_html($row->cas_number) . '<br>';
                 $icon = get_option('pfi_icon_applications','fas fa-cogs');
@@ -697,12 +697,12 @@ class ProductFinderInvenire {
                 } else {
                     echo '<strong>' . esc_html($row->product_name) . '</strong><br>';
                 }
-                $icon = get_option('pfi_icon_industry','fas fa-industry');
-                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Industry:</span>' . esc_html($row->industry) . '<br>';
-                $icon = get_option('pfi_icon_technology','fas fa-microchip');
-                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Technology:</span>' . esc_html($row->technology) . '<br>';
                 $icon = get_option('pfi_icon_chemical_structure','fas fa-vial');
                 echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Chemical Structure:</span>' . esc_html($row->chemical_structure) . '<br>';
+                $icon = get_option('pfi_icon_technology','fas fa-microchip');
+                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Technology:</span>' . esc_html($row->technology) . '<br>';
+                $icon = get_option('pfi_icon_industry','fas fa-industry');
+                echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">Industry:</span>' . esc_html($row->industry) . '<br>';
                 $icon = get_option('pfi_icon_cas_number','fas fa-barcode');
                 echo '<i class="'.esc_attr($icon).'"></i> <span class="pfi-label">CAS Number:</span>' . esc_html($row->cas_number) . '<br>';
                 $icon = get_option('pfi_icon_applications','fas fa-cogs');
